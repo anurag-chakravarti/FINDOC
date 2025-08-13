@@ -2,7 +2,6 @@ import '../../../domain/entities/picsum_image.dart';
 import '../../../domain/repositories/gallery_repository.dart';
 import '../../datasources/picsum_remote_ds.dart';
 
-
 class GalleryRepositoryImpl implements GalleryRepository {
   final PicsumRemoteDataSource remote;
   GalleryRepositoryImpl(this.remote);

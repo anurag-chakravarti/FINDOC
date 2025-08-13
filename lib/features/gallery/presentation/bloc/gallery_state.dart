@@ -7,11 +7,7 @@ class GalleryState extends Equatable {
   final List<PicsumImage> data;
   final String? error;
 
-  const GalleryState({
-    required this.status,
-    this.data = const [],
-    this.error,
-  });
+  const GalleryState({required this.status, this.data = const [], this.error});
 
   const GalleryState.initial() : this(status: GalleryStatus.initial);
 
@@ -19,12 +15,11 @@ class GalleryState extends Equatable {
     GalleryStatus? status,
     List<PicsumImage>? data,
     String? error,
-  }) =>
-      GalleryState(
-        status: status ?? this.status,
-        data: data ?? this.data,
-        error: error ?? this.error,
-      );
+  }) => GalleryState(
+    status: status ?? this.status,
+    data: data ?? this.data,
+    error: error ?? this.error,
+  );
 
   @override
   List<Object?> get props => [status, data, error];

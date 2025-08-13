@@ -1,6 +1,7 @@
 final _emailRe = RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$');
-final _passwordRe =
-RegExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$');
+final _passwordRe = RegExp(
+  r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$',
+);
 
 String? validateEmail(String? v) {
   if (v == null || v.trim().isEmpty) return 'Email is required';

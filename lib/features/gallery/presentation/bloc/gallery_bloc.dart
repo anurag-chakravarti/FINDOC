@@ -16,7 +16,9 @@ class GalleryBloc extends Bloc<GalleryEvent, GalleryState> {
         final data = await fetchImagesUseCase(limit: 10);
         emit(state.copyWith(status: GalleryStatus.success, data: data));
       } catch (e) {
-        emit(state.copyWith(status: GalleryStatus.failure, error: e.toString()));
+        emit(
+          state.copyWith(status: GalleryStatus.failure, error: e.toString()),
+        );
       }
     });
   }
